@@ -26,6 +26,7 @@ GEM
     multipart-post (2.0.0)
     oj (2.18.0)
     public_suffix (2.0.5)
+    rake (12.0.0)
     rufus-scheduler (3.3.2)
       tzinfo
     thread_safe (0.3.5)
@@ -50,6 +51,7 @@ PLATFORMS
 
 DEPENDENCIES
   dropbox-sdk-v2
+  rake
   rufus-scheduler
   togglv8
   twilio-ruby (~> 4.11.1)
