@@ -7,7 +7,6 @@ logger = Logger.new(STDOUT)
 logger.level = Logger::WARN
 _conf = ConfigFile.new("./config.json").load
 users_list = TogglevBot::EmployeeFinder.new(_conf["keys"]).users_list
-
 dropbox = TogglevBot::DropboxWrapper.new(
   "5dN8YtGUfLAAAAAAAAAATOsAyyT6igOADjiFycmLljOSNZCcSxYIwWv4vJSTLlsu"
 )
@@ -25,11 +24,6 @@ namespace :toggl do
       )
       FileUtils.rm_rf(tglb.toggl_file)
     end
-    twlo = TogglevBot::Twilio.new
-    twlo.send_message(
-      "Detailed Reports for /#{Date.today.to_s(:db)} https://goo.gl/ctOqsi"
-    )
-    puts "Detailed Reports for /#{Date.today.to_s(:db)} https://goo.gl/ctOqsi"
   end
 
   task :weekly do
