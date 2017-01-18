@@ -17,7 +17,11 @@ namespace :toggl do
       tglb = TogglevBot::TogglUser.new(user)
       tgr = TogglevBot::ToggleReport.new(user)
       tgr.set_workspace_id(tglb.workspaces.first["id"])
-      tgr.write_report(:summary, tglb.toggl_file)
+      tgr.write_report(
+        :summary, 
+        tglb.toggl_file,
+        since: Date.today.to_s(:db), until: Date.today.to_s(:db)
+      )
       dropbox.upload(
         "/togglev_bot/#{Date.today.to_s(:db)}/#{tglb.toggl_file}",
         tglb.toggl_file
