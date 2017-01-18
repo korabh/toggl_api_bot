@@ -44,4 +44,4 @@ namespace :toggl do
       "Weekly Reports for /#{Date.today.to_s(:db)} https://goo.gl/ctOqsi"
     )
   end
-end
+en
