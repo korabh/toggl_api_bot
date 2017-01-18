@@ -43,6 +43,5 @@ namespace :toggl do
     twlo.send_message(
       "Weekly Reports for /#{Date.today.to_s(:db)} https://goo.gl/ctOqsi"
     )
-    puts "Weekly Reports for /#{Date.today.to_s(:db)} https://goo.gl/ctOqsi"
   end
 end

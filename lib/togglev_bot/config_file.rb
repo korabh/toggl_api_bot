@@ -9,7 +9,7 @@ class ConfigFile
 
   def load
     if File.exist?(fname)
-      JSON.load(File.read(fname), symbolize_names: true)
+      JSON.load(File.read(fname))
     else
       raise "JSON syntax error occurred while parsing #{fname}"
     end
