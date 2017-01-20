@@ -26,12 +26,12 @@ namespace :toggl do
         "/togglev_bot/#{Date.today.to_s(:db)}/#{tglb.toggl_file}",
         tglb.toggl_file
       )
-      twlo = TogglevBot::Twilio.new
-      twlo.send_message(
-        "Summary Reports for /#{Date.today.to_s(:db)} https://goo.gl/ctOqsi"
-      )
       FileUtils.rm_rf(tglb.toggl_file)
     end
+    twlo = TogglevBot::Twilio.new
+    twlo.send_message(
+      "Summary Reports for /#{Date.today.to_s(:db)} https://goo.gl/ctOqsi"
+    )
   end
 
   task :weekly do
