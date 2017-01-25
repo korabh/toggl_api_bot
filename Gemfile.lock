@@ -1,8 +1,15 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activesupport (4.2.7.1)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    awesome_print (1.7.0)
     builder (3.2.3)
     chronic (0.10.2)
     domain_name (0.5.20161129)
@@ -20,8 +27,11 @@ GEM
       domain_name (~> 0.5)
     http-form_data (1.0.1)
     http_parser.rb (0.6.0)
+    i18n (0.7.0)
+    json (1.8.6)
     jwt (1.5.6)
     logger (1.2.8)
+    minitest (5.10.1)
     multi_json (1.12.1)
     multipart-post (2.0.0)
     oj (2.18.0)
@@ -50,6 +60,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
+  awesome_print
   dropbox-sdk-v2
   rake
   rufus-scheduler
@@ -58,7 +70,7 @@ DEPENDENCIES
   whenever
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.2.1p85
 
 BUNDLED WITH
-   1.13.6
+   1.14.2

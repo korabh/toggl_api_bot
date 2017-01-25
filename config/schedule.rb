@@ -5,6 +5,7 @@
 #
 # set :output, "/path/to/my/cron_log.log"
 #
+# TODO: Add timezone with :tz option
 every :weekday, :at => "11:55pm" do
   rake "toggl:summary"
 end

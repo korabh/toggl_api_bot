@@ -7,13 +7,8 @@ module TogglevBot
       super
     end
 
-    def write_report(type, fname, **options)
-      case type
-      when :summary
-        reports.write_summary(fname, options)
-      when :weekly
-        reports.write_weekly(fname, options)
-      end
+    def write_report(fname, **options)
+      reports.write_summary(fname, options)
     end
 
     def set_workspace_id(id)
