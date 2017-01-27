@@ -2,16 +2,19 @@ require "rufus-scheduler"
 
 scheduler = Rufus::Scheduler.new
 
-scheduler.in '3s' do
-  puts 'Hello... Rufus'
+# +---------------- minute (0 - 59)
+# |  +------------- hour (0 - 23)
+# |  |  +---------- day of month (1 - 31)
+# |  |  |  +------- month (1 - 12)
+# |  |  |  |  +---- day of week (0 - 6) (Sunday=0 or 7)
+# |  |  |  |  |
+#   *  *  *  *  *  command to be executed 
+scheduler.cron '50 23 * * * Europe/Belgrade' do
+  rake "toggl:summary"
 end
 
-# scheduler.cron '5 23 * * * Europe/Berlin' do
-#   rake "toggl:summary"
-# end
-#
-# scheduler.cron('00 12 * * sun#-1 Europe/Berlin') do
-#   rake "toggl:weekly"
-# end
+scheduler.cron('50 23 * * 0 Europe/Belgrade') do
+  rake "toggl:weekly"
+end
 
 scheduler.join
