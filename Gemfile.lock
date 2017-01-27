@@ -11,7 +11,6 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     awesome_print (1.7.0)
     builder (3.2.3)
-    chronic (0.10.2)
     domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     dropbox-sdk-v2 (0.0.3)
@@ -53,8 +52,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    whenever (0.9.7)
-      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -67,7 +64,6 @@ DEPENDENCIES
   rufus-scheduler
   togglv8
   twilio-ruby (~> 4.11.1)
-  whenever
 
 RUBY VERSION
    ruby 2.2.1p85
