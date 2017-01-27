@@ -9,10 +9,11 @@ module TogglevBot
 
     def toggl_file(extension=".pdf")
       str = ""
-      str << "toggl_"
+      str << "toggl-"
       str << Date.today.to_s(:db)
+      str << "-"
       str << user["fullname"].split(" ").join("_").downcase
-      str << extension
+      str << "-#{extension}"
       str
     end
 
