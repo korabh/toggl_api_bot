@@ -30,7 +30,7 @@ module TogglevBot
       end
       twlo = TogglevBot::Twilio.new
       twlo.send_message(
-        "Please review #{job_type.to_s} reports at https://goo.gl/ctOqsi. Toggle Bot.<3"
+        "Boss, Please review #{job_type.to_s} reports at https://goo.gl/ctOqsi. Toggle Bot.<3"
       )
     end
 
